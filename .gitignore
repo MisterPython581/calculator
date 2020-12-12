@@ -1,2 +1,4 @@
 .vs
 Debug
+*.user
+Calculator Tutorial/Calculator Tutorial.vcxproj.user

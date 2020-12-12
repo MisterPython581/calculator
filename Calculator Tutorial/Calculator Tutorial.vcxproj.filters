@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc">
-      <Filter>Resources</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Resource.h">
       <Filter>Headers</Filter>
     </ClInclude>
@@ -27,6 +22,12 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Form1.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource2.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -48,5 +49,19 @@
     <Image Include="app.ico">
       <Filter>Resources</Filter>
     </Image>
+    <Image Include="calculator.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="icon2.ico">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="calculator.ico">
+      <Filter>Resources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Calculator Tutorial.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

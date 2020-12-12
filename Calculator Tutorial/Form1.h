@@ -400,7 +400,6 @@ namespace CLR_WindowsForms {
 				this->Controls->Add(this->btnBackspace);
 				this->MaximizeBox = false;
 				this->Name = L"Form1";
-				this->ShowIcon = false;
 				this->Text = L"Calculator Tutorial";
 				this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 				this->ResumeLayout(false);
