@@ -503,6 +503,10 @@ namespace CLR_WindowsForms {
 			{
 				resultBox->Text = "0";
 			}
+			if (resultBox->Text == "-")
+			{
+				resultBox->Text = "0";
+			}
 		}
 	};
 }
