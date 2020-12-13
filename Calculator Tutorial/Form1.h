@@ -410,98 +410,99 @@ namespace CLR_WindowsForms {
 			}
 			#pragma endregion
 			double firstDigit, secondDigit, result;
-			String^ operators;
+			String^ operators = "";
 			String^ sep = "";
-			private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
-			}
-			private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
-			}
-		private: System::Void EnterNumber(System::Object^ sender, System::EventArgs^ e) {
-			Button^ Numbers = safe_cast<Button^>(sender);
-			if (resultBox->Text == "0")
-			{
-				resultBox->Text = Numbers->Text;
-			}
-			else
-			{
-				resultBox->Text = resultBox->Text + Numbers->Text;
-			}
-		}
-		private: System::Void EnterOperator(System::Object^ sender, System::EventArgs^ e) {
-			Button^ NumbersOp = safe_cast<Button^>(sender);
-			firstDigit = Double::Parse(resultBox->Text);
-			resultBox->Text = "";
-			operators = NumbersOp->Text;
-		}
-		private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-			if (sep == "")
-			{
-				sep = ".";
-				try
+			private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {}
+			private: System::Void EnterNumber(System::Object^ sender, System::EventArgs^ e) {
+				Button^ Numbers = safe_cast<Button^>(sender);
+				if (resultBox->Text == "0")
 				{
-					Double::Parse("15.6");
-				}
-				catch (System::FormatException^)
-				{
-					sep = ",";
-				}
-				btnDec->Text = sep;
-			}
-			if (!resultBox->Text->Contains(sep))
-			{
-				resultBox->Text = resultBox->Text + sep;
-			}
-		}
-		private: System::Void btnEqual_Click(System::Object^ sender, System::EventArgs^ e) {
-			secondDigit = Double::Parse(resultBox->Text);
-			if (operators == "+")
-			{
-				result = firstDigit + secondDigit;
-				resultBox->Text = System::Convert::ToString(result);
-			}
-			else if (operators == "-")
-			{
-				result = firstDigit - secondDigit;
-				resultBox->Text = System::Convert::ToString(result);
-			}
-			else if (operators == "/")
-			{
-				result = firstDigit / secondDigit;
-				resultBox->Text = System::Convert::ToString(result);
-			}
-			if (operators == "X")
-			{
-				result = firstDigit * secondDigit;
-				resultBox->Text = System::Convert::ToString(result);
-			}
-		}
-		private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
-			resultBox->Text = "0";
-		}
-		private: System::Void btnCE_Click(System::Object^ sender, System::EventArgs^ e) {
-			resultBox->Text = "0";
-		}
-		private: System::Void btnSwitchPosNeg_Click(System::Object^ sender, System::EventArgs^ e) {
-			if (resultBox->Text != "0") {
-				if (resultBox->Text->Contains("-"))
-				{
-					resultBox->Text = resultBox->Text->Remove(0, 1);
+					resultBox->Text = Numbers->Text;
 				}
 				else
 				{
-					resultBox->Text = "-" + resultBox->Text;
+					resultBox->Text = resultBox->Text + Numbers->Text;
 				}
 			}
+			private: System::Void EnterOperator(System::Object^ sender, System::EventArgs^ e) {
+				if (operators == "")
+				{
+					Button^ NumbersOp = safe_cast<Button^>(sender);
+					firstDigit = Double::Parse(resultBox->Text);
+					resultBox->Text = "";
+					operators = NumbersOp->Text;
+				}
+			}
+			private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
+				if (sep == "")
+				{
+					sep = ".";
+					try
+					{
+						Double::Parse("15.6");
+					}
+					catch (System::FormatException^)
+					{
+						sep = ",";
+					}
+					btnDec->Text = sep;
+				}
+				if (!resultBox->Text->Contains(sep))
+				{
+					resultBox->Text = resultBox->Text + sep;
+				}
+			}
+			private: System::Void btnEqual_Click(System::Object^ sender, System::EventArgs^ e) {
+				secondDigit = Double::Parse(resultBox->Text);
+				if (operators == "+")
+				{
+					result = firstDigit + secondDigit;
+					resultBox->Text = System::Convert::ToString(result);
+				}
+				else if (operators == "-")
+				{
+					result = firstDigit - secondDigit;
+					resultBox->Text = System::Convert::ToString(result);
+				}
+				else if (operators == "/")
+				{
+					result = firstDigit / secondDigit;
+					resultBox->Text = System::Convert::ToString(result);
+				}
+				if (operators == "X")
+				{
+					result = firstDigit * secondDigit;
+					resultBox->Text = System::Convert::ToString(result);
+				}
+				operators = "";
+			}
+			private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
+				resultBox->Text = "0";
+			}
+			private: System::Void btnCE_Click(System::Object^ sender, System::EventArgs^ e) {
+				resultBox->Text = "0";
+			}
+			private: System::Void btnSwitchPosNeg_Click(System::Object^ sender, System::EventArgs^ e) {
+				if (resultBox->Text != "0") {
+					if (resultBox->Text->Contains("-"))
+					{
+						resultBox->Text = resultBox->Text->Remove(0, 1);
+					}
+					else
+					{
+						resultBox->Text = "-" + resultBox->Text;
+					}
+				}
+			}
+			private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
+			if (resultBox->Text->Length > 0)
+			{
+				resultBox->Text = resultBox->Text->Remove(resultBox->Text->Length - 1, 1);
+			}
+			if (resultBox->Text == "")
+			{
+				resultBox->Text = "0";
+			}
 		}
-		private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (resultBox->Text->Length > 0)
-		{
-			resultBox->Text = resultBox->Text->Remove(resultBox->Text->Length - 1, 1);
-		}
-		if (resultBox->Text == "")
-		{
-			resultBox->Text = "0";
-		}
-	}
-};
+	};
 }
