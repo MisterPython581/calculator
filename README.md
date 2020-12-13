@@ -1,4 +1,4 @@
-# C++ Calculator (example)
+# C++ .NET Calculator
  A C++ calculator using .NET Framework, that runs on Winodws.
  Thanks to Paul Oamen and his [YouTube video](https://youtube.com/watch?v=_yHqktG2GU4)!
  
