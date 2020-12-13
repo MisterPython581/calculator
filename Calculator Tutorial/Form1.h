@@ -80,6 +80,7 @@ namespace CLR_WindowsForms {
 	private: System::Windows::Forms::Button^ btnDec;
 
 	private: System::Windows::Forms::Button^ btn0;
+	private: System::Windows::Forms::TextBox^ history;
 
 
 
@@ -117,6 +118,7 @@ namespace CLR_WindowsForms {
 				this->btnDiv = (gcnew System::Windows::Forms::Button());
 				this->btnDec = (gcnew System::Windows::Forms::Button());
 				this->btn0 = (gcnew System::Windows::Forms::Button());
+				this->history = (gcnew System::Windows::Forms::TextBox());
 				this->SuspendLayout();
 				// 
 				// btnBackspace
@@ -124,7 +126,7 @@ namespace CLR_WindowsForms {
 				this->btnBackspace->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnBackspace->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnBackspace->Location = System::Drawing::Point(8, 56);
+				this->btnBackspace->Location = System::Drawing::Point(8, 70);
 				this->btnBackspace->Name = L"btnBackspace";
 				this->btnBackspace->Size = System::Drawing::Size(80, 80);
 				this->btnBackspace->TabIndex = 0;
@@ -134,11 +136,12 @@ namespace CLR_WindowsForms {
 				// 
 				// resultBox
 				// 
+				this->resultBox->BackColor = System::Drawing::SystemColors::Window;
 				this->resultBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
 				this->resultBox->Cursor = System::Windows::Forms::Cursors::Default;
 				this->resultBox->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->resultBox->Location = System::Drawing::Point(8, 8);
+				this->resultBox->Location = System::Drawing::Point(8, 22);
 				this->resultBox->Multiline = true;
 				this->resultBox->Name = L"resultBox";
 				this->resultBox->ReadOnly = true;
@@ -152,7 +155,7 @@ namespace CLR_WindowsForms {
 				this->btnC->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnC->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnC->Location = System::Drawing::Point(89, 56);
+				this->btnC->Location = System::Drawing::Point(89, 70);
 				this->btnC->Name = L"btnC";
 				this->btnC->Size = System::Drawing::Size(80, 80);
 				this->btnC->TabIndex = 0;
@@ -165,7 +168,7 @@ namespace CLR_WindowsForms {
 				this->btnCE->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnCE->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnCE->Location = System::Drawing::Point(170, 56);
+				this->btnCE->Location = System::Drawing::Point(170, 70);
 				this->btnCE->Name = L"btnCE";
 				this->btnCE->Size = System::Drawing::Size(80, 80);
 				this->btnCE->TabIndex = 0;
@@ -178,7 +181,7 @@ namespace CLR_WindowsForms {
 				this->btnSwitchPosNeg->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnSwitchPosNeg->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnSwitchPosNeg->Location = System::Drawing::Point(251, 56);
+				this->btnSwitchPosNeg->Location = System::Drawing::Point(251, 70);
 				this->btnSwitchPosNeg->Name = L"btnSwitchPosNeg";
 				this->btnSwitchPosNeg->Size = System::Drawing::Size(80, 80);
 				this->btnSwitchPosNeg->TabIndex = 0;
@@ -191,7 +194,7 @@ namespace CLR_WindowsForms {
 				this->btn9->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn9->Location = System::Drawing::Point(170, 142);
+				this->btn9->Location = System::Drawing::Point(170, 156);
 				this->btn9->Name = L"btn9";
 				this->btn9->Size = System::Drawing::Size(80, 80);
 				this->btn9->TabIndex = 2;
@@ -204,7 +207,7 @@ namespace CLR_WindowsForms {
 				this->btnPlus->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnPlus->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnPlus->Location = System::Drawing::Point(251, 142);
+				this->btnPlus->Location = System::Drawing::Point(251, 156);
 				this->btnPlus->Name = L"btnPlus";
 				this->btnPlus->Size = System::Drawing::Size(80, 80);
 				this->btnPlus->TabIndex = 3;
@@ -217,7 +220,7 @@ namespace CLR_WindowsForms {
 				this->btn8->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn8->Location = System::Drawing::Point(89, 142);
+				this->btn8->Location = System::Drawing::Point(89, 156);
 				this->btn8->Name = L"btn8";
 				this->btn8->Size = System::Drawing::Size(80, 80);
 				this->btn8->TabIndex = 4;
@@ -230,7 +233,7 @@ namespace CLR_WindowsForms {
 				this->btn7->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn7->Location = System::Drawing::Point(8, 142);
+				this->btn7->Location = System::Drawing::Point(8, 156);
 				this->btn7->Name = L"btn7";
 				this->btn7->Size = System::Drawing::Size(80, 80);
 				this->btn7->TabIndex = 5;
@@ -243,7 +246,7 @@ namespace CLR_WindowsForms {
 				this->btn3->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn3->Location = System::Drawing::Point(170, 314);
+				this->btn3->Location = System::Drawing::Point(170, 328);
 				this->btn3->Name = L"btn3";
 				this->btn3->Size = System::Drawing::Size(80, 80);
 				this->btn3->TabIndex = 10;
@@ -256,7 +259,7 @@ namespace CLR_WindowsForms {
 				this->btnMul->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnMul->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnMul->Location = System::Drawing::Point(251, 314);
+				this->btnMul->Location = System::Drawing::Point(251, 328);
 				this->btnMul->Name = L"btnMul";
 				this->btnMul->Size = System::Drawing::Size(80, 80);
 				this->btnMul->TabIndex = 11;
@@ -269,7 +272,7 @@ namespace CLR_WindowsForms {
 				this->btn2->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn2->Location = System::Drawing::Point(89, 314);
+				this->btn2->Location = System::Drawing::Point(89, 328);
 				this->btn2->Name = L"btn2";
 				this->btn2->Size = System::Drawing::Size(80, 80);
 				this->btn2->TabIndex = 12;
@@ -282,7 +285,7 @@ namespace CLR_WindowsForms {
 				this->btn1->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn1->Location = System::Drawing::Point(8, 314);
+				this->btn1->Location = System::Drawing::Point(8, 328);
 				this->btn1->Name = L"btn1";
 				this->btn1->Size = System::Drawing::Size(80, 80);
 				this->btn1->TabIndex = 13;
@@ -295,7 +298,7 @@ namespace CLR_WindowsForms {
 				this->btn6->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn6->Location = System::Drawing::Point(170, 228);
+				this->btn6->Location = System::Drawing::Point(170, 242);
 				this->btn6->Name = L"btn6";
 				this->btn6->Size = System::Drawing::Size(80, 80);
 				this->btn6->TabIndex = 6;
@@ -308,7 +311,7 @@ namespace CLR_WindowsForms {
 				this->btnMinus->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnMinus->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnMinus->Location = System::Drawing::Point(251, 228);
+				this->btnMinus->Location = System::Drawing::Point(251, 242);
 				this->btnMinus->Name = L"btnMinus";
 				this->btnMinus->Size = System::Drawing::Size(80, 80);
 				this->btnMinus->TabIndex = 7;
@@ -321,7 +324,7 @@ namespace CLR_WindowsForms {
 				this->btn5->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn5->Location = System::Drawing::Point(89, 228);
+				this->btn5->Location = System::Drawing::Point(89, 242);
 				this->btn5->Name = L"btn5";
 				this->btn5->Size = System::Drawing::Size(80, 80);
 				this->btn5->TabIndex = 8;
@@ -334,7 +337,7 @@ namespace CLR_WindowsForms {
 				this->btn4->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn4->Location = System::Drawing::Point(8, 228);
+				this->btn4->Location = System::Drawing::Point(8, 242);
 				this->btn4->Name = L"btn4";
 				this->btn4->Size = System::Drawing::Size(80, 80);
 				this->btn4->TabIndex = 9;
@@ -347,7 +350,7 @@ namespace CLR_WindowsForms {
 				this->btnEqual->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnEqual->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnEqual->Location = System::Drawing::Point(170, 400);
+				this->btnEqual->Location = System::Drawing::Point(170, 414);
 				this->btnEqual->Name = L"btnEqual";
 				this->btnEqual->Size = System::Drawing::Size(80, 80);
 				this->btnEqual->TabIndex = 14;
@@ -360,7 +363,7 @@ namespace CLR_WindowsForms {
 				this->btnDiv->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnDiv->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnDiv->Location = System::Drawing::Point(251, 400);
+				this->btnDiv->Location = System::Drawing::Point(251, 414);
 				this->btnDiv->Name = L"btnDiv";
 				this->btnDiv->Size = System::Drawing::Size(80, 80);
 				this->btnDiv->TabIndex = 15;
@@ -373,7 +376,7 @@ namespace CLR_WindowsForms {
 				this->btnDec->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnDec->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btnDec->Location = System::Drawing::Point(89, 400);
+				this->btnDec->Location = System::Drawing::Point(89, 414);
 				this->btnDec->Name = L"btnDec";
 				this->btnDec->Size = System::Drawing::Size(80, 80);
 				this->btnDec->TabIndex = 16;
@@ -386,7 +389,7 @@ namespace CLR_WindowsForms {
 				this->btn0->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn0->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
-				this->btn0->Location = System::Drawing::Point(8, 400);
+				this->btn0->Location = System::Drawing::Point(8, 414);
 				this->btn0->Name = L"btn0";
 				this->btn0->Size = System::Drawing::Size(80, 80);
 				this->btn0->TabIndex = 17;
@@ -394,11 +397,26 @@ namespace CLR_WindowsForms {
 				this->btn0->UseVisualStyleBackColor = true;
 				this->btn0->Click += gcnew System::EventHandler(this, &Form1::EnterNumber);
 				// 
+				// history
+				// 
+				this->history->BorderStyle = System::Windows::Forms::BorderStyle::None;
+				this->history->Cursor = System::Windows::Forms::Cursors::Arrow;
+				this->history->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+					static_cast<System::Byte>(0)));
+				this->history->ForeColor = System::Drawing::SystemColors::WindowFrame;
+				this->history->Location = System::Drawing::Point(8, 3);
+				this->history->Name = L"history";
+				this->history->Size = System::Drawing::Size(323, 15);
+				this->history->TabIndex = 18;
+				this->history->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+				// 
 				// Form1
 				// 
 				this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 				this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-				this->ClientSize = System::Drawing::Size(340, 488);
+				this->BackColor = System::Drawing::SystemColors::Window;
+				this->ClientSize = System::Drawing::Size(340, 498);
+				this->Controls->Add(this->history);
 				this->Controls->Add(this->btnEqual);
 				this->Controls->Add(this->btnDiv);
 				this->Controls->Add(this->btnDec);
@@ -446,6 +464,7 @@ namespace CLR_WindowsForms {
 				}
 			}
 			private: System::Void EnterOperator(System::Object^ sender, System::EventArgs^ e) {
+				history->Text = resultBox->Text;
 				if (operators == "")
 				{
 					Button^ NumbersOp = safe_cast<Button^>(sender);
@@ -453,6 +472,7 @@ namespace CLR_WindowsForms {
 					resultBox->Text = "";
 					operators = NumbersOp->Text;
 				}
+				history->Text = history->Text + operators;
 			}
 			private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
 				if (sep == "")
@@ -474,6 +494,7 @@ namespace CLR_WindowsForms {
 				}
 			}
 			private: System::Void btnEqual_Click(System::Object^ sender, System::EventArgs^ e) {
+				history->Text = history->Text + resultBox->Text + "=";
 				secondDigit = Double::Parse(resultBox->Text);
 				if (operators == "+")
 				{
@@ -498,10 +519,10 @@ namespace CLR_WindowsForms {
 				operators = "";
 			}
 			private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
-				resultBox->Text = "0";
+				reset();
 			}
 			private: System::Void btnCE_Click(System::Object^ sender, System::EventArgs^ e) {
-				resultBox->Text = "0";
+				reset();
 			}
 			private: System::Void btnSwitchPosNeg_Click(System::Object^ sender, System::EventArgs^ e) {
 				if (resultBox->Text != "0") {
@@ -528,6 +549,11 @@ namespace CLR_WindowsForms {
 			{
 				resultBox->Text = "0";
 			}
+		}
+		void reset()
+		{
+			resultBox->Text = "0";
+			history->Text = "";
 		}
 	};
 }
