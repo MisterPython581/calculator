@@ -121,6 +121,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnBackspace
 				// 
+				this->btnBackspace->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnBackspace->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnBackspace->Location = System::Drawing::Point(8, 56);
@@ -133,7 +134,8 @@ namespace CLR_WindowsForms {
 				// 
 				// resultBox
 				// 
-				this->resultBox->Cursor = System::Windows::Forms::Cursors::No;
+				this->resultBox->BorderStyle = System::Windows::Forms::BorderStyle::None;
+				this->resultBox->Cursor = System::Windows::Forms::Cursors::Default;
 				this->resultBox->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->resultBox->Location = System::Drawing::Point(8, 8);
@@ -147,6 +149,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnC
 				// 
+				this->btnC->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnC->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnC->Location = System::Drawing::Point(89, 56);
@@ -159,6 +162,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnCE
 				// 
+				this->btnCE->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnCE->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnCE->Location = System::Drawing::Point(170, 56);
@@ -171,6 +175,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnSwitchPosNeg
 				// 
+				this->btnSwitchPosNeg->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnSwitchPosNeg->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnSwitchPosNeg->Location = System::Drawing::Point(251, 56);
@@ -183,6 +188,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn9
 				// 
+				this->btn9->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn9->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn9->Location = System::Drawing::Point(170, 142);
@@ -195,6 +201,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnPlus
 				// 
+				this->btnPlus->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnPlus->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnPlus->Location = System::Drawing::Point(251, 142);
@@ -207,6 +214,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn8
 				// 
+				this->btn8->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn8->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn8->Location = System::Drawing::Point(89, 142);
@@ -219,6 +227,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn7
 				// 
+				this->btn7->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn7->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn7->Location = System::Drawing::Point(8, 142);
@@ -231,6 +240,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn3
 				// 
+				this->btn3->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn3->Location = System::Drawing::Point(170, 314);
@@ -243,6 +253,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnMul
 				// 
+				this->btnMul->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnMul->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnMul->Location = System::Drawing::Point(251, 314);
@@ -255,6 +266,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn2
 				// 
+				this->btn2->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn2->Location = System::Drawing::Point(89, 314);
@@ -267,6 +279,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn1
 				// 
+				this->btn1->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn1->Location = System::Drawing::Point(8, 314);
@@ -279,6 +292,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn6
 				// 
+				this->btn6->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn6->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn6->Location = System::Drawing::Point(170, 228);
@@ -291,6 +305,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnMinus
 				// 
+				this->btnMinus->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnMinus->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnMinus->Location = System::Drawing::Point(251, 228);
@@ -303,6 +318,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn5
 				// 
+				this->btn5->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn5->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn5->Location = System::Drawing::Point(89, 228);
@@ -315,6 +331,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn4
 				// 
+				this->btn4->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn4->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn4->Location = System::Drawing::Point(8, 228);
@@ -327,6 +344,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnEqual
 				// 
+				this->btnEqual->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnEqual->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnEqual->Location = System::Drawing::Point(170, 400);
@@ -339,6 +357,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnDiv
 				// 
+				this->btnDiv->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnDiv->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnDiv->Location = System::Drawing::Point(251, 400);
@@ -351,6 +370,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btnDec
 				// 
+				this->btnDec->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btnDec->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btnDec->Location = System::Drawing::Point(89, 400);
@@ -363,6 +383,7 @@ namespace CLR_WindowsForms {
 				// 
 				// btn0
 				// 
+				this->btn0->Cursor = System::Windows::Forms::Cursors::Hand;
 				this->btn0->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 					static_cast<System::Byte>(0)));
 				this->btn0->Location = System::Drawing::Point(8, 400);
