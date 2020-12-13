@@ -439,6 +439,8 @@ namespace CLR_WindowsForms {
 				this->Controls->Add(this->btnC);
 				this->Controls->Add(this->btnBackspace);
 				this->MaximizeBox = false;
+				this->MaximumSize = System::Drawing::Size(356, 537);
+				this->MinimumSize = System::Drawing::Size(356, 537);
 				this->Name = L"Form1";
 				this->ShowIcon = false;
 				this->Text = L"Calculator Tutorial";
