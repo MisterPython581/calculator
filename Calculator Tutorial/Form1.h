@@ -82,6 +82,7 @@ namespace CLR_WindowsForms {
 	private: System::Windows::Forms::Button^ btn0;
 
 
+
 	private:
 		/// <summary>
 		/// Erforderliche Designervariable.
@@ -376,7 +377,7 @@ namespace CLR_WindowsForms {
 				// 
 				this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 				this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-				this->ClientSize = System::Drawing::Size(340, 489);
+				this->ClientSize = System::Drawing::Size(340, 488);
 				this->Controls->Add(this->btnEqual);
 				this->Controls->Add(this->btnDiv);
 				this->Controls->Add(this->btnDec);
@@ -400,6 +401,7 @@ namespace CLR_WindowsForms {
 				this->Controls->Add(this->btnBackspace);
 				this->MaximizeBox = false;
 				this->Name = L"Form1";
+				this->ShowIcon = false;
 				this->Text = L"Calculator Tutorial";
 				this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 				this->ResumeLayout(false);
@@ -409,6 +411,7 @@ namespace CLR_WindowsForms {
 			#pragma endregion
 			double firstDigit, secondDigit, result;
 			String^ operators;
+			String^ sep = "";
 			private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 			}
 			private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -431,9 +434,22 @@ namespace CLR_WindowsForms {
 			operators = NumbersOp->Text;
 		}
 		private: System::Void btnDec_Click(System::Object^ sender, System::EventArgs^ e) {
-			if (!resultBox->Text->Contains("."))
+			if (sep == "")
 			{
-				resultBox->Text = resultBox->Text + ".";
+				sep = ".";
+				try
+				{
+					Double::Parse("15.6");
+				}
+				catch (System::FormatException^)
+				{
+					sep = ",";
+				}
+				btnDec->Text = sep;
+			}
+			if (!resultBox->Text->Contains(sep))
+			{
+				resultBox->Text = resultBox->Text + sep;
 			}
 		}
 		private: System::Void btnEqual_Click(System::Object^ sender, System::EventArgs^ e) {
