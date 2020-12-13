@@ -477,22 +477,23 @@ namespace CLR_WindowsForms {
 		}
 		private: System::Void btnC_Click(System::Object^ sender, System::EventArgs^ e) {
 			resultBox->Text = "0";
-
 		}
 		private: System::Void btnCE_Click(System::Object^ sender, System::EventArgs^ e) {
 			resultBox->Text = "0";
 		}
 		private: System::Void btnSwitchPosNeg_Click(System::Object^ sender, System::EventArgs^ e) {
-			if (resultBox->Text->Contains("-"))
-			{
-				resultBox->Text = resultBox->Text->Remove(0, 1);
-			}
-			else
-			{
-				resultBox->Text = "-" + resultBox->Text;
+			if (resultBox->Text != "0") {
+				if (resultBox->Text->Contains("-"))
+				{
+					resultBox->Text = resultBox->Text->Remove(0, 1);
+				}
+				else
+				{
+					resultBox->Text = "-" + resultBox->Text;
+				}
 			}
 		}
-	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
+		private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (resultBox->Text->Length > 0)
 		{
 			resultBox->Text = resultBox->Text->Remove(resultBox->Text->Length - 1, 1);
